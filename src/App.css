@@ -8,4 +8,10 @@ img{
   margin: 0px auto;
   cursor: pointer;
   width: 25%;
-  }
+}
+
+.text-box{
+  display: flex;
+  margin: 10px auto;
+  justify-content: center;
+}

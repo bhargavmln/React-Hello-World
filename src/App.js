@@ -7,7 +7,7 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      title: 'Hello from Bridgelabz'
+      userName: ''
     }
   }
 
@@ -15,13 +15,25 @@ class App extends React.Component {
     console.log("save button is clicked",$event);
     window.open(this.url, "_blank");
   }
+
+  //Bind the input Form Element using setState to userName onChange event
+  onNameChange = (event) => {
+    console.log("value is ", event.target.value);
+    this.setState({ userName: event.target.value })
+  }
   
+  //change in userName reflected in header tag
   render() {
     return (
+      <>
       <div>
-        <h1>{this.state.title}</h1>
+        <h1>I'm {this.state.userName} from Bridgelabz</h1>
         <img src={logo} onClick={this.onClick} alt="logo"/>
       </div>
+      <div className='text-box'>
+        <input onChange={this.onNameChange} />
+      </div>
+      </>
     );
   }
 }
