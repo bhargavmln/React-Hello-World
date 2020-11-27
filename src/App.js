@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-
+import logo from './assets/logo.png'
 class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      title: 'Hello from Bridgelabz'
+      title: 'Hello from Bridy'
     }
   }
   
@@ -13,6 +13,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>{this.state.title}</h1>
+        <img src={logo} alt="logo"/>
       </div>
     );
   }
